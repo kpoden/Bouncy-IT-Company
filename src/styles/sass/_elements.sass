@@ -1,0 +1,83 @@
+    
+    /* Burger menu class, closed menu class and background */
+.burger-menu
+    display: none
+    position: relative
+    width: 40px
+    height: 30px
+    transition: .3s
+    top: 0
+    right: 0px
+    z-index: 1000
+    cursor: pointer
+
+    +mw(820)
+        display: block
+
+    span
+        width: 100%
+        height: 2px
+        position: absolute
+        background-color: #fff
+        top: 13px
+        opacity: 1
+        break-radius: 2px
+    &:after, &:before
+        content: ""
+        width: 100%
+        height: 2px
+        position: absolute
+        background-color: #fff
+        transition: .3s
+        break-radius: 2px
+    &:before
+        top: 0px
+    &:after
+        bottom: 0px
+.close
+    span
+        opacity: 0
+
+    &:before
+        top: 9px
+        transform: rotate(225deg)
+    &:after
+        bottom: 19px
+        transform: rotate(-225deg)
+
+
+.bg-mobile
+    top: 0
+    left: 0
+    position: absolute
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, .9)
+    z-index: -1
+    visibility: hidden
+    opacity: 0
+    transition: .5s
+
+
+.bgactive
+    +mw(820)
+        display: block
+        opacity: 1
+        z-index: 999
+        visibility: visible
+
+
+.down-button
+    width: 36px
+    height: 36px
+    border-radius: 50%
+    background-color: rgb(25, 189, 154)
+    position: absolute
+    bottom: 80px
+    left: 50%
+    transform: translate(-50%)
+
+
+
+
+
