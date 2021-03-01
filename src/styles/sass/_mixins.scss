@@ -47,26 +47,22 @@
     }
 }
 
-/* Multypurpose mixin */
+/* Multypurpose max-width mixin */
 @mixin mw($width) {
     @media (max-width: $width + 'px') {
       @content;
     }
 }
 
+/* Multypurpose min-width mixin */
+@mixin minw($width) {
+    @media (min-width: $width + 'px') {
+      @content;
+    }
+}
 
-/* Responsive padding/margin */
 
-// @mixin resp($min-pad, $max-pad, $min-width, $max-width){
-//     calc()
-// }
-
-// $maxWidth: 1280;
-// @mixin adaptiv-font($pcSize, $mobSize) {
-//  $addSize: $pcSize - $mobSize;
-//  $maxWidth: $maxWidth - 320;
-//  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
-// }
+/* Responsive parametrs */
 
 $maxWidth: 1360;
 
@@ -74,5 +70,17 @@ $maxWidth: 1360;
     $addSize: $pcSize - $mobSize;
     $maxWidth: $maxWidth - 320;
     font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin adaptive-padding($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    padding: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin adaptive-width($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    width: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
 }
 

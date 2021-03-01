@@ -1,5 +1,5 @@
     
-    /* Burger menu class, closed menu class and background */
+    /* ----- Burger menu class, closed menu class and background for mobile ------ */
 .burger-menu
     display: none
     position: relative
@@ -67,12 +67,15 @@
         z-index: 999
         visibility: visible
 
+/* ----- end mobile block ----- */
+
+/* ---- Header round down button ----- */
 
 .down-button
     width: 36px
     height: 36px
     border-radius: 50%
-    background-color: rgb(25, 189, 154)
+    background-color: $turq
     position: absolute
     bottom: 6vh
     left: 50%
@@ -100,7 +103,57 @@
         border-top: transparent
         border-left: transparent
 
+/* ----- end down button -----*/
 
+
+/* ----- Block title and text extension ----- */
+
+.block-title
+    font-family: SourceSansPro
+    text-transform: uppercase
+    line-height: 2
+    font-weight: 100
+    letter-spacing: 4px
+    color: rgb(51, 59, 70)
+
+.block-text
+    font-size: 14px
+    font-family: "OpenSans"
+    color: rgb(129, 134, 142)
+    line-height: 1.786
+    +adaptive-font(14, 11)
+
+/* ----- end ----- */
+
+
+/* ----- Button ----- */
+
+.btn
+    font-size: 16px
+    font-family: "OpenSans"
+    color: rgb(51, 59, 70)
+    line-height: 40px
+    text-align: center
+    border: 1px solid #000
+    width: 140px
+    height: 40px
+    border-radius: 20px
+    cursor: pointer
+    transition: .1s
+
+/* ----- end ----- */
+
+/* ----- Text formating ----- */
+
+.bold
+    font-weight: bold
+
+.turq
+    color: $turq
+
+.turq-b
+    @extend .bold
+    color: $turq
 
 
 

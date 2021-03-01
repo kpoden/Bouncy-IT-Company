@@ -1,0 +1,68 @@
+.details
+    text-align: center
+    background-color: #f3f3f3
+    padding-top: 60px
+
+    &__title
+        +adaptive-font(20, 16)
+        padding-bottom: 40px
+
+
+    &__subtitle
+        padding-bottom: 60px
+        max-width: 460px
+        margin: 0 auto
+
+    &__icons
+        margin: 0 auto
+        width: 210px
+        display: flex
+        justify-content: space-between
+        padding-bottom: 60px
+
+    &__icon
+        display: block
+        position: relative
+        border-radius: 50%
+        background-color: #81868e
+        width: 53px
+        height: 53px
+        cursor: pointer
+        transition: .2s
+
+        &:hover
+            background-color: $turq
+
+        span
+            position: absolute
+            top: 53%
+            left: 50%
+            transform: translate(-50%, -50%)
+            color: #fff
+            font-size: 28px
+
+.creative-text
+     text-align: left
+        +mw600
+            padding: 0 10%
+            
+
+        &__title
+            font-family: "OpenSans"
+            font-size: 20px 
+            color: #333
+            font-weight: 100
+            padding-bottom: 30px
+      
+        &__wrap
+            display: flex
+            padding-bottom: 80px
+            +mw600
+                flex-direction: column
+      
+        &__left
+            padding-right: 100px
+            +mw600
+                padding-right: 0
+        &__right
+
