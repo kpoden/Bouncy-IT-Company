@@ -9,8 +9,15 @@
 @font-face {
     font-family: 'SourceSansPro';
     src: url('../fonts/SourceSansPro-Regular.ttf')
-    
 }
+    
+@font-face {
+    font-family: 'SourceSansPro';
+    src: url('../fonts/SourceSansPro-Light.ttf') ;
+    font-weight: 100;
+    font-style: normal;
+}
+
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Regular.ttf')
