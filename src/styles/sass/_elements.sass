@@ -119,7 +119,6 @@
     padding-bottom: 25px
 
 .block-text
-    font-size: 14px
     font-family: "OpenSans"
     color: rgb(129, 134, 142)
     line-height: 1.786
@@ -131,7 +130,7 @@
 /* ----- Button ----- */
 
 .btn
-    font-size: 16px
+    +adaptive-font(16, 10)
     font-family: "OpenSans"
     color: rgb(51, 59, 70)
     line-height: 40px
@@ -142,6 +141,7 @@
     border-radius: 20px
     cursor: pointer
     transition: .1s
+    display: block
 
 /* ----- end ----- */
 

@@ -19,6 +19,14 @@ $(document).ready(function() {
         }
     });
 
+    $(".featured__image").mouseover(function () {
+        $(this).width('50%');
+
+    });
+    $(".featured__image").mouseout(function () {
+        $(this).width('33.4%');
+    });
+
 
 
 });
