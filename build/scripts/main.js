@@ -28,5 +28,15 @@ $(document).ready(function() {
     });
 
 
+    $(function() {
+        $('.chart').easyPieChart({
+            scaleColor: false,
+            barColor: '#19bd9a',
+            trackColor: '#047378'
+            
+        });
+    });
+
+
 
 });
