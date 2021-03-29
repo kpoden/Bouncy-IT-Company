@@ -27,12 +27,28 @@ $(document).ready(function() {
         $(this).width('33.4%');
     });
 
+/* ----- Round Pie Charts init and sizes ----- */
+
+    chartSize = 120;
+
+    function windowSize(){
+        if ($(window).width() <= '900'){
+            chartSize = 80;
+        } else if ($(window).width() <= '1200') {
+            chartSize = 100;
+        }
+        else {
+            chartSize = 120;
+        }
+        return chartSize;
+    }
 
     $(function() {
         $('.chart').easyPieChart({
             scaleColor: false,
             barColor: '#19bd9a',
-            trackColor: '#047378'
+            trackColor: '#047378',
+            size: windowSize()   
             
         });
     });

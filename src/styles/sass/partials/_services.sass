@@ -1,6 +1,8 @@
 .services
     text-align: center
     padding: 80px 0 0 0
+    +mw(1200)
+        +adaptive-padding(30, 15)
 
 
     &__title
@@ -8,11 +10,65 @@
 
     &__subtitle
 
+    &__main
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 50px 0 0 0
+        font-family: OpenSans
 
-.block-title
 
-.block-text
+    &__icons
+        display: flex
+        flex-direction: column
+        justify-content: center
+        
+
+    &__icon
+        margin-bottom: 12px
+
+
+
+    &__texts
+        +adaptive-padding(40, 15)
+        text-align: left
+        color: #333333
+        +adaptive-width(400, 250)
+        +adaptive-font(16, 13)
+        min-width: 150px        
+        h4
+            font-weight: 100
+            padding: 0 0 33px 0
+            +mw(979)
+                padding: 0 0 20px 0
+        p
+            padding: 0 0 33px 0
+            +mw(979)
+                padding: 0 0 20px 0
+
+    &__charts
+        display: flex
+        align-items: center
+        +mw(768)
+            flex-direction: column
+            +adaptive-padding(70, 10)
+
+.chart-box
+    position: relative
 
 .chart
     transform: scaleX(-1)
+    +adaptive-padding(20, 2)
 
+.chart-name
+    +adaptive-font(16, 10)
+    color: #999999
+    padding-bottom: 10px
+
+.chart-percent
+    position: absolute
+    top: 40%
+    left: 50%
+    transform: translate(-50%, -50%)
+    +adaptive-font(25, 18)
+    color: #333333
