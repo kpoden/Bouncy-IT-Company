@@ -91,3 +91,4 @@ $maxWidth: 1360;
     height: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
 }
 
+/* End responsive parametrs */

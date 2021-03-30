@@ -1,0 +1,57 @@
+.impressed
+    
+    background: url("../img/impressed/impressed-bg.png")
+    background-size: cover
+
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        max-width: 1170px
+        margin: 0 auto
+        padding: 0 20px 100px
+
+        
+
+
+    &__left
+        display: flex
+        flex-direction: column
+        justify-content: end
+        width: 50%
+        padding-top: 30px
+        +mw600
+            width: 70%
+            margin: 0 auto
+
+    &__title
+        color: #ffffff
+
+
+    &__text
+
+
+    &__sign
+        padding-top: 20px
+
+
+    &__right
+        position: relative
+        +mw600
+            display: none
+
+
+    &__monitor
+        margin-top: -35px
+        width: 100%
+        
+        
+
+    &__bouncy
+        font-family: 'BigJohn'
+        font-size: 30px
+        font-weight: bold
+        position: absolute
+        top: calc(50% - 40px)
+        left: 50%
+        transform: translate(-50%, -50%)
+        color: #ffffff
