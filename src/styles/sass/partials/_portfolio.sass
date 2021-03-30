@@ -1,0 +1,53 @@
+.portfolio
+    text-align: center
+    margin: 0 auto
+    max-width: 1112px
+    padding: 70px 0 0 0
+    display: flex
+    flex-direction: column
+    align-items: center
+
+
+    &__title
+        color: #333333
+
+    &__subtitle
+        max-width: 480px
+        color: #999999
+
+    &__list
+        padding: 80px 0 0 0
+        display: flex
+        justify-content: space-between
+        width: 583px
+        
+
+
+    &__list-item
+        color: #333333
+        font-size: 16px
+        font-family: OpenSans
+        cursor: pointer
+        position: relative
+
+        &:after
+            content: ''
+            display: block
+            position: absolute
+            bottom: -20px
+            left: 50%
+            transform: translateX(-50%)
+            width: 0
+            height: 2px
+            background: $turq
+            transition: .2s
+
+        &:hover::after
+            width: 75%
+        
+
+
+.block-title
+
+.block-text
+
