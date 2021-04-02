@@ -19,13 +19,13 @@
         padding: 80px 0 0 0
         display: flex
         justify-content: space-between
-        width: 583px
+        +adaptive-width(583, 320)
         
 
 
     &__list-item
         color: #333333
-        font-size: 16px
+        +adaptive-font(16, 12)
         font-family: OpenSans
         cursor: pointer
         position: relative
@@ -46,8 +46,117 @@
             width: 75%
         
 
+    &__gallery
+        padding: 60px 20px 0
+.gallery
+    display: flex
+   
+    &__group
+        display: flex
+        +mw600
+            flex-direction: column
 
-.block-title
+    &__col
+        width: 50%
+        transition: .2s
+        +mw600
+            width: 100%
 
-.block-text
+    &__item
+        width: 97%
+        cursor: pointer
+        position: relative
+        overflow: hidden
+        margin: 6px
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%        
+            background-color: rgba(0,0,0,0.8)
+            transform: translateY(-100%)
+            transition: .2s
+        &:hover::after
+            transform: translateY(0)
+
+        &:hover .galhover__wrap
+            visibility: visible
+            opacity: 1
+        &:hover .galhover__title:after
+            width: 25px
+            
+
+
+
+    &__image
+        width: 100%
+
+
+    .galhover
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 2000
+        text-align: left
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        
+        
+        
+        &__wrap
+            width: 70%
+            opacity: 0
+            visibility: hidden
+            transition: .3s
+
+        &__title
+            text-transform: uppercase
+            font-family: SourceSansPro
+            +adaptive-font(20, 15)
+            text-align: left
+            margin-bottom: 20%
+            color: $turq
+            position: relative
+            &:after
+                content: ''
+                display: block
+                position: absolute
+                bottom: -20px
+                width: 0px
+                height: 2px
+                background: $turq
+                transition: .3s ease-in-out
+            
+
+        &__text
+            font-family: MyriadPro
+            +adaptive-font(12, 9)
+            color: #99cccc
+
+    .galhover
+
+        &__icons
+            position: absolute
+            bottom: 10%
+
+
+        &__icon
+            color: #ffffff
+            text-align: center
+            line-height: 30px
+            font-size: 15px
+            width: 30px
+            height: 30px
+
+
+
+
+
+
 

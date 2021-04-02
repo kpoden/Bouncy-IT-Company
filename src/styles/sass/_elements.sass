@@ -157,8 +157,20 @@
     cursor: pointer
     transition: .2s
 
-    &:hover
-        background-color: $turq
+    &--bg-grey
+        @extend .icon
+        background-color: #81868e
+        &:hover
+            background-color: $turq
+
+    &--bg-black
+        @extend .icon
+        background-color: #000
+        opacity: 0.8
+
+        &:hover
+            background-color: $turq
+            opacity: 1
 
     span
         position: absolute
