@@ -1,11 +1,17 @@
 .portfolio
-    text-align: center
-    margin: 0 auto
-    max-width: 1112px
-    padding: 70px 0 0 0
-    display: flex
-    flex-direction: column
-    align-items: center
+    background: #f3f3f3
+    padding-bottom: 100px
+
+    &__wrap
+        text-align: center
+        margin: 0 auto
+        padding: 70px 0 0 0
+        display: flex
+        flex-direction: column
+        align-items: center
+        max-width: 1122px
+        
+
 
 
     &__title
@@ -18,8 +24,9 @@
     &__list
         padding: 80px 0 0 0
         display: flex
+        flex-wrap: wrap
         justify-content: space-between
-        +adaptive-width(583, 320)
+        +adaptive-width(583, 270)
         
 
 
@@ -47,27 +54,32 @@
         
 
     &__gallery
-        padding: 60px 20px 0
+        padding: 60px 0px 40px
 .gallery
     display: flex
+    width: 100%
    
     &__group
         display: flex
+        justify-content: space-between
         +mw600
             flex-direction: column
 
     &__col
         width: 50%
         transition: .2s
+        padding: 0 5px 0
         +mw600
             width: 100%
 
     &__item
-        width: 97%
+
+        width: 100%
         cursor: pointer
         position: relative
         overflow: hidden
-        margin: 6px
+        margin: 6px auto
+        
         &::after
             content: ""
             display: block
@@ -75,10 +87,11 @@
             top: 0
             left: 0
             width: 100%
-            height: 100%        
+            height: 99%
             background-color: rgba(0,0,0,0.8)
-            transform: translateY(-100%)
+            transform: translateY(-101%)
             transition: .2s
+            
         &:hover::after
             transform: translateY(0)
 
@@ -153,6 +166,38 @@
             font-size: 15px
             width: 30px
             height: 30px
+
+    &__footer
+
+.portfolio-footer
+    position: relative
+    max-width: 1112px
+    width: calc(100% - 10px)
+    background: url('../img/portfolio/portfolio-footer.png')
+    background-size: cover
+    +adaptive-height(200, 100)
+    max-height: 200px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+
+    &__image
+
+    &__text
+        font-family: OpenSans
+        font-size: 20px
+        color: #ffffff
+        padding-bottom: 25px        
+
+    &__btn
+        border-color: #ffffff
+        color: #ffffff
+        transition: .2s
+        &:hover
+            background-color: #ffffff
+            color: $turq
 
 
 
