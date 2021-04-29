@@ -175,7 +175,7 @@
     width: calc(100% - 10px)
     background: url('../img/portfolio/portfolio-footer.png')
     background-size: cover
-    +adaptive-height(200, 100)
+    +adaptive-height(200, 120)
     max-height: 200px
     display: flex
     flex-direction: column
@@ -187,9 +187,9 @@
 
     &__text
         font-family: OpenSans
-        font-size: 20px
+        +adaptive-font(20, 17)
         color: #ffffff
-        padding-bottom: 25px        
+        padding-bottom: 23px        
 
     &__btn
         border-color: #ffffff

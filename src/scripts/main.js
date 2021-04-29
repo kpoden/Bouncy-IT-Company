@@ -53,6 +53,26 @@ $(document).ready(function() {
         });
     });
 
+/* ----- Slick Slider init and settings ----- */
+
+    $('.team-slider-wrap').slick({
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        pauseOnHover: false,
+        infinite: true
+    });
+
+    $('.testimonials__wrap').slick({
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnHover: false,
+        infinite: true
+
+    });
 
 
 });
