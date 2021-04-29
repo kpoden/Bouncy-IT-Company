@@ -195,6 +195,37 @@
     @extend .bold
     color: $turq
 
+/* ----- end Text formating ----- */
+
+/* ----- Slick Slider styles ----- */
+
+
+.slick-dots
+    display: flex
+    justify-content: space-between
+    font-size: 0
+    margin: 60px auto 0
+    width: 70px
+
+
+    li
+        display: block
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        border: 1px solid #19bd9a
+        cursor: pointer
+        transition: .2s
+
+        &:hover
+            background-color: #19bd9a
+
+        button
+            display: none
+
+    li.slick-active
+        background-color: #19bd9a
+
 
 
 

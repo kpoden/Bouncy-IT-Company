@@ -27,7 +27,9 @@ $(document).ready(function() {
         $(this).width('33.4%');
     });
 
-/* ----- Round Pie Charts init and sizes ----- */
+//**** end mobile menu code ****//
+
+//* ----- Round Pie Charts init and sizes ----- *//
 
     chartSize = 120;
 
@@ -53,7 +55,9 @@ $(document).ready(function() {
         });
     });
 
-/* ----- Slick Slider init and settings ----- */
+//* ----- end Round Pie Charts init and sizes ----- *//
+
+//* ----- Slick Slider init and settings ----- *//
 
     $('.team-slider-wrap').slick({
         dots: true,
@@ -74,5 +78,40 @@ $(document).ready(function() {
 
     });
 
+    $('.news__wrap').slick({
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnHover: false,
+        infinite: true,
+        vertical: true,
+        verticalSwiping: true
 
-});
+    });
+
+//* ----- end Slick Slider init and settings ----- *//
+
+//* -----Read More code ----- *//
+
+    
+
+    $('.news__more').on('click', function() {
+
+        if($('.news__more').hasClass('shown')) {
+            $(this).html("+ Read More");
+            $(this).siblings('.news__article').children('.news__more-text').hide();
+            $(this).siblings('.news__article').children('.news__dots').show();
+            $(this).removeClass("shown");
+        }
+
+        else {
+            $(this).html("- Read Less");
+            $(this).siblings('.news__article').children('.news__more-text').show();
+            $(this).siblings('.news__article').children('.news__dots').hide();
+            $(this).addClass("shown");
+        }
+
+
+    })
+})
