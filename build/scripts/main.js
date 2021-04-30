@@ -98,7 +98,7 @@ $(document).ready(function() {
 
     $('.news__more').on('click', function() {
 
-        if($('.news__more').hasClass('shown')) {
+        if($(this).hasClass('shown')) {
             $(this).html("+ Read More");
             $(this).siblings('.news__article').children('.news__more-text').hide();
             $(this).siblings('.news__article').children('.news__dots').show();
