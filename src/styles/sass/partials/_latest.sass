@@ -6,6 +6,12 @@
     font-family: OpenSans
     position: relative
 
+    &__wrap
+        max-width: 1200px
+        margin: 0 auto
+        +mw768
+            padding: 0 30px 
+
 
 
     &__title
@@ -15,6 +21,8 @@
     &__subtitle
         color: #fff
         padding-bottom: 90px
+        +mw768
+            padding-bottom: 30px
 
 
     &__block
@@ -22,12 +30,15 @@
 
 .news
     max-width: 1030px
-    margin: 0 auto
+    margin: 0 auto 100px
+    padding-top: 100px
+
 
     &__title
         color: #fff
         padding: 10px 0
         adaptive-font(20,15)
+        max-width: 75%
 
 
     &__author
@@ -48,6 +59,9 @@
         padding: 50px 0
         max-width: 630px
         min-height: 250px
+        +adaptive-font(16, 12)
+        +mw768
+            max-width: 80%
 
 
     &__more
@@ -56,6 +70,11 @@
 
     &__more-text
         display: none
+
+    &__wrap
+        display: flex
+        align-items: center
+        justify-content: center
 
     &__wrap .slick-dots
 
@@ -70,6 +89,8 @@
             border-color: #fff
             &:hover
                 background-color: #fff
+        +mw480
+            display: none
         li.slick-active
             background-color: #fff
 
