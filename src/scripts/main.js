@@ -92,9 +92,7 @@ $(document).ready(function() {
 
 //* ----- end Slick Slider init and settings ----- *//
 
-//* -----Read More code ----- *//
-
-    
+//* ----- Read More code ----- *//
 
     $('.news__more').on('click', function() {
 
@@ -114,4 +112,21 @@ $(document).ready(function() {
 
 
     })
+
+//* -----  end Read More code ----- *//
+
+
+//* ----- Subscribe Field Placeholder code ----- *//
+
+
+    $('.subscribe__address').on('focus', function() {
+        $('.subscribe__placeholder').addClass('focused');
+    })
+    $('.subscribe__address').on('focusout', function() {
+        if($(this).val() === '') {
+            $('.subscribe__placeholder').removeClass('focused');
+        } 
+    })
+
+
 })
