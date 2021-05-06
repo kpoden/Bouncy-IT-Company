@@ -118,13 +118,15 @@ $(document).ready(function() {
 
 //* ----- Subscribe Field Placeholder code ----- *//
 
+    $('.form-field').val('');
+    $('.submit__textarea').val('');
 
-    $('.subscribe__address').on('focus', function() {
-        $('.subscribe__placeholder').addClass('focused');
+    $('.form-field').on('focus', function() {
+        $(this).next().addClass('focused');
     })
-    $('.subscribe__address').on('focusout', function() {
+    $('.form-field').on('focusout', function() {
         if($(this).val() === '') {
-            $('.subscribe__placeholder').removeClass('focused');
+            $(this).next().removeClass('focused');
         } 
     })
 
