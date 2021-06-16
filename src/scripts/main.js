@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 
-    //**** mobile menu code ****//
+//**** mobile menu code ****//
     $(".burger-menu").on('click', function() {
         $(".top-menu__nav").toggleClass("mobile-active");
         $(".bg-mobile").toggleClass("bgactive");
@@ -28,6 +28,8 @@ $(document).ready(function() {
     });
 
 //**** end mobile menu code ****//
+
+//--------------------------------------//
 
 //* ----- Round Pie Charts init and sizes ----- *//
 
@@ -56,6 +58,8 @@ $(document).ready(function() {
     });
 
 //* ----- end Round Pie Charts init and sizes ----- *//
+
+//--------------------------------------//
 
 //* ----- Slick Slider init and settings ----- *//
 
@@ -92,6 +96,8 @@ $(document).ready(function() {
 
 //* ----- end Slick Slider init and settings ----- *//
 
+//--------------------------------------//
+
 //* ----- Read More code ----- *//
 
     $('.news__more').on('click', function() {
@@ -115,8 +121,10 @@ $(document).ready(function() {
 
 //* -----  end Read More code ----- *//
 
+//--------------------------------------//
 
 //* ----- Subscribe Field Placeholder code ----- *//
+
 
     $('.form-field').val('');
     $('.submit__textarea').val('');
@@ -130,7 +138,11 @@ $(document).ready(function() {
         } 
     })
 
+//* ----- Subscribe Field Placeholder code END ----- *//
 
+//--------------------------------------//
+
+//* ----- Map Init ----- *//
 
     function myMap() {
         var mapCanvas = document.getElementById("map");
@@ -143,5 +155,94 @@ $(document).ready(function() {
     
 })
 
+//* ----- Map Init END ----- *//
 
+//--------------------------------------//
+
+//* ----- GSAP Section ----- *//
+
+gsap.from(".header__header-title", 1, {
+    scrollTrigger: ".header__header-title", 
+    y: '-100px', 
+    opacity: 0
+  });
+
+gsap.from(".down-button", 1, {
+    scrollTrigger: ".down-button", 
+    y: '20px', 
+    opacity: '0',
+    delay: 1});
+
+gsap.from(".header__top", 2.5, {
+    scrollTrigger: ".header__top", 
+    opacity: '0' });
+
+gsap.from(".bouncy__right", 2, {
+    scrollTrigger: ".bouncy__right", 
+    y: '-50px', 
+    opacity: '0' });
+
+gsap.from(".details__title, .details__subtitle", 1, {
+    scrollTrigger: ".details__title ", 
+    x: '-30px', 
+    opacity: '0' });
+
+
+gsap.from(".details__icon",{
+    scrollTrigger: ".details__icon ", 
+    y: '-5px', 
+    stagger: .2,
+    opacity: '0' });
+
+gsap.from(".featured__title, .featured__subtitle", 1, {
+    scrollTrigger: ".featured__title ", 
+    x: '-30px', 
+    opacity: '0' });
+    
+gsap.from(".services__title, .services__subtitle", 1, {
+    scrollTrigger: ".services__title ", 
+    x: '-30px', 
+    opacity: '0' });
+    
+gsap.from(".portfolio__title, .portfolio__subtitle", 1, {
+    scrollTrigger: ".portfolio__title ", 
+    x: '-30px', 
+    opacity: '0' });
+
+gsap.from(".portfolio__list", 1, {
+    scrollTrigger: ".portfolio__list ", 
+    delay: .5,
+    opacity: '0' });
+
+
+gsap.from(".gallery__item",{
+    scrollTrigger: ".gallery ", 
+    y: '-5px', 
+    stagger: .1,
+    opacity: '0' });
+
+    
+gsap.from(".team__title, .team__subtitle", 1, {
+    scrollTrigger: ".team__title ", 
+    x: '-30px', 
+    opacity: '0' });
+
+gsap.from(".testimonials__title, .testimonials__subtitle", 1, {
+    scrollTrigger: ".testimonials__title ", 
+    x: '-30px', 
+    opacity: '0' });
+
+gsap.from(".price__title, .price__subtitle", 1, {
+    scrollTrigger: ".price__title ", 
+    x: '-30px', 
+    opacity: '0' });
+
+gsap.from(".contactus__title, .contactus__subtitle", 1, {
+    scrollTrigger: ".contactus__title ", 
+    x: '-30px', 
+    opacity: '0' });
+
+
+
+//* ----- GSAP Section END ----- *//
 
