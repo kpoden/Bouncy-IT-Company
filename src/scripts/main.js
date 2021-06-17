@@ -182,9 +182,9 @@ gsap.from(".bouncy__right", 2, {
     y: '-50px', 
     opacity: '0' });
 
-gsap.from(".details__title, .details__subtitle", 1, {
+gsap.from(".details__title, .details__subtitle", .5, {
     scrollTrigger: ".details__title ", 
-    x: '-30px', 
+    y: '-20px',
     opacity: '0' });
 
 
@@ -194,19 +194,19 @@ gsap.from(".details__icon",{
     stagger: .2,
     opacity: '0' });
 
-gsap.from(".featured__title, .featured__subtitle", 1, {
+gsap.from(".featured__title, .featured__subtitle", .5, {
     scrollTrigger: ".featured__title ", 
-    x: '-30px', 
+     y: '-20px',
     opacity: '0' });
     
-gsap.from(".services__title, .services__subtitle", 1, {
+gsap.from(".services__title, .services__subtitle", .5, {
     scrollTrigger: ".services__title ", 
-    x: '-30px', 
+     y: '-20px',
     opacity: '0' });
     
-gsap.from(".portfolio__title, .portfolio__subtitle", 1, {
+gsap.from(".portfolio__title, .portfolio__subtitle", .5, {
     scrollTrigger: ".portfolio__title ", 
-    x: '-30px', 
+     y: '-20px',
     opacity: '0' });
 
 gsap.from(".portfolio__list", 1, {
@@ -222,24 +222,24 @@ gsap.from(".gallery__item",{
     opacity: '0' });
 
     
-gsap.from(".team__title, .team__subtitle", 1, {
+gsap.from(".team__title, .team__subtitle", .5, {
     scrollTrigger: ".team__title ", 
-    x: '-30px', 
+     y: '-20px',
     opacity: '0' });
 
-gsap.from(".testimonials__title, .testimonials__subtitle", 1, {
+gsap.from(".testimonials__title, .testimonials__subtitle", .5, {
     scrollTrigger: ".testimonials__title ", 
-    x: '-30px', 
+     y: '-20px',
     opacity: '0' });
 
-gsap.from(".price__title, .price__subtitle", 1, {
+gsap.from(".price__title, .price__subtitle", .5, {
     scrollTrigger: ".price__title ", 
-    x: '-30px', 
+     y: '-20px',
     opacity: '0' });
 
-gsap.from(".contactus__title, .contactus__subtitle", 1, {
+gsap.from(".contactus__title, .contactus__subtitle", .5, {
     scrollTrigger: ".contactus__title ", 
-    x: '-30px', 
+     y: '-20px',
     opacity: '0' });
 
 
