@@ -27,6 +27,14 @@ $(document).ready(function() {
         $(this).width('33.4%');
     });
 
+    $('.top-menu__link').on('click', function () {
+        if ($(window).width() < 820) {
+            $('.top-menu__nav').removeClass('mobile-active');
+            $('.bg-mobile').removeClass("bgactive");
+            $(".burger-menu").removeClass("close");
+        }
+    })
+
 //**** end mobile menu code ****//
 
 //--------------------------------------//
@@ -123,6 +131,18 @@ $(document).ready(function() {
 
 //--------------------------------------//
 
+//* ---- Show Up Button ---- *//
+
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 780) {
+        $('#up-btn').fadeIn();
+    } else $('#up-btn').fadeOut();
+});
+
+//--------------------------------------//
+
+
 //* ----- Subscribe Field Placeholder code ----- *//
 
 
@@ -159,7 +179,7 @@ $(document).ready(function() {
 
 //--------------------------------------//
 
-//* ----- GSAP Section ----- *//
+//* ----- GSAP Section Animation On Scroll----- *//
 
 gsap.from(".header__header-title", 1, {
     scrollTrigger: ".header__header-title", 
@@ -244,4 +264,94 @@ gsap.from(".contactus__title, .contactus__subtitle", .5, {
 
 
 
-//* ----- GSAP Section END ----- *//
+//* ----- GSAP Section Scroll Animation END ----- *//
+
+////**** SCROLL TO SECTIONS FROM NAV ****////
+
+let navLinks = document.querySelectorAll('.top-menu__link');
+
+navLinks.forEach(element => element.addEventListener('click', (e) => {
+    e.preventDefault();
+
+}))
+
+
+document.getElementById("main").addEventListener("click", () => {
+    gsap.to(window, {
+        duration: 1,
+        scrollTo: {
+            y: ".header"
+        }
+    })
+})
+
+document.getElementById("about").addEventListener("click", () => {
+    gsap.to(window, {
+        duration: .5,
+        scrollTo: {
+            y: ".details"
+        }
+    })
+})
+
+document.getElementById("services").addEventListener("click", () => {
+    gsap.to(window, {
+        duration: 1,
+        scrollTo: {
+            y: ".services"
+        }
+    })
+})
+document.getElementById("portfolio").addEventListener("click", () => {
+    gsap.to(window, {
+        duration: 1,
+        scrollTo: {
+            y: ".portfolio"
+        }
+    })
+})
+document.getElementById("team").addEventListener("click", () => {
+    gsap.to(window, {
+        duration: 1,
+        scrollTo: {
+            y: ".team"
+        }
+    })
+})
+document.getElementById("blog").addEventListener("click", () => {
+    gsap.to(window, {
+        duration: 1,
+        scrollTo: {
+            y: ".testimonials"
+        }
+    })
+})
+document.getElementById("contact").addEventListener("click", () => {
+    gsap.to(window, {
+        duration: 1,
+        scrollTo: {
+            y: ".contactus"
+        }
+    })
+})
+
+document.getElementById("up-btn").addEventListener("click", () => {
+    gsap.to(window, {
+        duration: .5,
+        scrollTo: {
+            y: ".main"
+        }
+    })
+})
+
+document.querySelector(".down-button").addEventListener("click", () => {
+    gsap.to(window, {
+        duration: 1.5,
+        scrollTo: {
+            y: ".portfolio"
+        }
+    })
+})
+
+
+////**** SCROLL TO SECTIONS FROM NAV END****////
