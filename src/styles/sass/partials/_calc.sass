@@ -1,71 +1,103 @@
 .calc
     display: flex
+    justify-content: space-between
 
     &__title
 
     &__form
         width: 48%
 
-.form
+    .form
 
-    &__group
-        width: 100%
-        display: flex
-        justify-content: space-between
-        &:last-child
-            margin-top: 20px
-    
-    &__field-name
-            color: $grey
-            font-size: 14px
-            padding-bottom: 20px
-
-    &__field
-        display: flex
-        flex-direction: column
-        width: 47%
-        margin-bottom: 20px
-        
-        input[type=text]
+        &__group
             width: 100%
+            display: flex
+            justify-content: space-between
+            &:last-child
+                margin-top: 20px
+        
+        &__field-name
+                color: $grey
+                font-size: 14px
+                padding-bottom: 20px
+
+        &__field
+            display: flex
+            flex-direction: column
+            width: 47%
+            margin-bottom: 20px
+            
+            input[type=text]
+                width: 100%
+                height: 67px
+                border: 1px solid $grey
+                font-size: 30px
+                padding: 0.5em 0.5em 0
+
+        &__attach
+            width: 47%
             height: 67px
-            border: 1px solid $grey
-
-    &__attach
-        width: 47%
-        height: 67px
-        background: $fuschia
-        margin-top: 36px
+            background: $fuschia
+            margin-top: 36px
+            display: flex
+            position: relative
+        &__arrow
+            display: block
+            background: $void
+            width: 68px
+            height: 100%
+            position: relative
+            svg
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+        
+        &__files
+            color: #ffffff
+            text-align: center
+            margin: auto
+    .agree
         display: flex
+        &__check
+
+        &__text
+            font-size: 12px
+            padding-left: 12px
+            cursor: pointer
+            color: $grey
+
+
+    .paper
+        background: $fuschia
+        width: 45%
+        height: 570px
         position: relative
-    &__arrow
-        display: block
-        background: $void
-        width: 68px
-        height: 100%
-        position: relative
-        svg
-            position: absolute
-            top: 50%
-            left: 50%
-            transform: translate(-50%, -50%)
-    
-    &__files
         color: #ffffff
-        text-align: center
-        margin: auto
-.agree
-    display: flex
-    &__check
+        margin-top: 60px
 
-    &__text
-        font-size: 12px
-        padding-left: 12px
-        cursor: pointer
-        color: $grey
+        &__wrap
+            margin: 0 0 55px 55px 
+            position: absolute
+            bottom: 0
+            left: 0
+        &__img
+            position: absolute
+            top: -70px
+            left: -120px
+
+        &__title
+            font-size: 18px
+            padding-bottom: 26px
+ 
+
+        &__subtext
+            font-size: 12px
+            max-width: 230px
+            &:first-child
+                padding-bottom: 15px
 
 
-    &__paper
 
 
 
